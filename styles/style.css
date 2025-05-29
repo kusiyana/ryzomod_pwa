@@ -150,6 +150,24 @@ added content-data
   margin: 0;
   padding: 0;
 }
+.infographic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.progress-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+svg {
+  transform: rotate(-90deg); /* Start from top */
+}
+#progress-text {
+font-size: 2rem;
+}
+
+
 .content-data li {
   padding-inline:0.5rem;
   list-style: none;
