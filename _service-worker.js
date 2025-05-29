@@ -10,11 +10,15 @@ var CACHE_NAME = APP_NAME + '-' + APP_VER;
 var REQUIRED_FILES = [
 	// HTML Files
 	'index.html',
+	'power.html',
+	'water.html',
+	'alerts.html',
 	// Styles
 	'styles/style.css',
 	'styles/bootstrap.css',
 	// Scripts
 	'scripts/custom.js',
+	'scripts/graphProgress.js',
 	'scripts/bootstrap.min.js',
 	// Plugins
 	'plugins/before-after/before-after.css',
@@ -36,6 +40,7 @@ var REQUIRED_FILES = [
 	'fonts/webfonts/fa-solid-900.woff2',
 	// Images
 	'images/empty.png',
+	'images/ryzosens/ryzosens-logo.png',
 ];
 
 // Service Worker Diagnostic. Set true to get console logs.

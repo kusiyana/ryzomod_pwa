@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css">    
-<link rel="manifest" href="_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
+<link rel="manifest" href="_manifest.json" data-pwa-version="4.0">
 <link rel="apple-touch-icon" sizes="180x180" href="theme/app/icons/icon-192x192.png">
 </head>
     
@@ -23,9 +23,8 @@
     
 <div id="page">
     <div id="header" class="header header-fixed header-logo-left">
-        <a href="#" class="header-title"><img src="./images/ryzosens/ryzosens-logo.png" width="190" alt="logo" /></a>
+        <a href="#" class="header-logo" title="logo"></a>
         <a href="#" class="header-icon header-icon-1" title="icon"><i class="fa-solid fa-ellipsis-vertical fa-2x"></i></a>
-        <a href="#" class="header-icon header-icon-2" title="icon" style="display: none;"><i class="fa fa-search"></i></a>
         </div>
     <div id="footer-bar" class="footer-bar-1">
         <a href="index.html" class="active-nav"><i class="fa-solid fa-house"></i><span>Home</span></a>
@@ -37,15 +36,15 @@
     <div class="page-content header-clear-large">
 
         
-        <div class="card card-top card-style card-pattern">
+        <div class="card card-top card-pattern">
     
             <div class="row">
                 <div class="col-12 text-center">
-                    <div class="content pt-3">
+                    <div class="content">
                         <div class="content-data">
                             <i class="fa-solid fa-water color-aqua-dark fa-3x"></i>
                             <h2 class="color-highlight text-uppercase">Water</h2>
-                            <p>consumption</p>
+                            <p class="mt-n3">consumption</p>
                             <div>Icon + text</div>
                         </div>
                     </div>
@@ -53,11 +52,11 @@
             </div>
             <div class="row">
                 <div class="col-12 text-center">
-                    <div class="content pt-3">
+                    <div class="content">
                         <div class="content-data">
                             <i class="fa-solid fa-plug color-blue-dark fa-3x"></i>
                             <h2 class="color-highlight text-uppercase">Power</h2>
-                             <p>usage</p>
+                             <p class="mt-n3">usage</p>
                              <div>Icon + text</div>
                         </div>
           
@@ -65,29 +64,6 @@
                 </div>
             </div>
         </div>
-
-  
-
-    
-
-
- 
-        
-  
-
-        <!-- <div class="card card-style">
-            <div class="content mb-0">
-                <h1 class="text-center mb-0">Get Sticky Today</h1>
-                <p class="text-center color-highlight font-11 mt-n1 pb-0">Tons of Awesome Features just for You.</p>
-                <p class="boxed-text-xl mt-n3">
-                    Fast, easy to use and filled with features. Get Sticky Today and give your site the Mobile Feeling it deserves.
-                </p>
-                <a href="#" class="btn btn-m btn-center-l text-uppercase font-900 bg-red-dark rounded-sm shadow-xl mb-4">Purchase Now - $25</a>
-            </div>
-        </div> -->
-
-     
-    
     </div>
     <!-- End of Page Content--> 
     <!-- All Menus, Action Sheets, Modals, Notifications, Toasts, Snackbars get Placed outside the <div class="page-content"> -->
@@ -203,9 +179,9 @@
             <a href="#" class="pwa-dismiss close-menu color-highlight text-uppercase font-700">Maybe later</a>
         </div>
     </div>
-    
 </div>
 
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript" src="js/graphProgress.js"></script>
 </body>

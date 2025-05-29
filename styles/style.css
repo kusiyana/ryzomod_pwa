@@ -136,17 +136,108 @@ body {
 .content-boxed {
   padding: 20px 15px 0px 15px;
 }
-
+.content h2 span {
+  /* border-bottom: 2px solid #F2A319 !important; */
+  padding-top:5px;
+}
 /*
 added content-data 
 */
 
 .content-data {
-  padding: 2rem;
-  background: radial-gradient(50% 50% at 50% 50%, #000000 0%, #151313 100%);
-  /* box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5); */
-  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
+.content-data li {
+  padding-inline:0.5rem;
+  list-style: none;
+}
+.status-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  color: white;
+  font-family: sans-serif;
+}
+
+.energy-icon {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+label {
+  flex: 1;
+}
+.progress-bar-content {
+  position: relative;
+  width: 160px;
+}
+
+.progress-bar {
+  background: #222;
+  border-radius: 12px;
+  height: 24px;
+  width: 160px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-fill {
+  background: #0066ff;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  transition: width 0.3s ease;
+}
+
+.progress-label {
+  position: absolute;
+  right: 10px;
+  font-size: 14px;
+  color: white;
+  line-height: 24px;
+  z-index: 1;
+}
+.content-energy {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.content-energy > div:first-child {
+  width: 75%;
+  display: flex;
+  align-items: center;
+}
+.content-energy > div:first-child > .input-style {
+  width: 100%;
+
+}
+.content-energy > div:last-child {
+  width: 25%;
+  display: flex;
+  align-items: center;
+}
+
+.content-energy .pwa-divider-sm{
+  width: 25%;
+  margin-inline: auto;
+  background-color: #D9D9D9;
+  height:2px;
+}
+
 
 /*Logos*/
 .header-logo {
@@ -162,10 +253,19 @@ added content-data
 
 .theme-light .header .header-logo {
   background-image: url(../images/preload-logo.png);
+  background-image: url(../images/ryzosens/ryzosens-logo.png);
+  width: 190px;
+  background-size: contain;
 }
 
 .theme-dark .header .header-logo {
-  background-image: url(../images/preload-logo.png);
+  /* background-image: url(../images/preload-logo.png); */
+    /*
+  changed the logo
+  */
+  background-image: url(../images/ryzosens/ryzosens-logo.png);
+  width: 190px;
+  background-size: contain;
 }
 
 .theme-light .footer .footer-logo {
@@ -5266,6 +5366,7 @@ input[type=number] {
 .theme-dark .menu .form-border-bottom label,
 .theme-dark .timeline-item-content-full {
   background-color: #21252a !important;
+  background-color: #151313 !important;
   color: #FFF;
 }
 
@@ -5273,7 +5374,13 @@ input[type=number] {
 .theme-dark .menu .nav a:hover,
 .theme-dark .menu .nav .active-subnav,
 .theme-dark .menu .nav .divider {
-  background-color: rgba(255, 255, 255, 0.05);
+  /* background-color: rgba(255, 255, 255, 0.05); */
+
+  /*
+  added new divider color
+  */
+
+  background-color: rgba(217, 217, 217, 0.6) !important;
 }
 
 .theme-dark .menu-hider {
