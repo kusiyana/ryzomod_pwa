@@ -1,11 +1,11 @@
-<!doctype html>
+    <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1,  viewport-fit=cover" />
-<title>Ryzosens Power</title>
+<title>Ryzosens Sign in</title>
 <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="styles/style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,22 +21,67 @@
 <div id="preloader"><div class="spinner-border color-highlight" role="status"></div></div>
     
 <div id="page">
-    <div id="header" class="header header-fixed header-logo-left">
-        <a href="#" class="header-logo" title="logo"></a>
-        <a href="#" class="header-icon header-icon-1" title="icon"><i class="fa-solid fa-ellipsis-vertical fa-2x"></i></a>  
-        <a href="#" data-back-button class="header-icon header-icon-2" title="icon"><i class="font-18 fa fa-arrow-left color-theme"></i></a>
+    <div class="page-content pb-0">
+
+        <div data-card-height="cover" class="card">
+            <div class="card-top notch-clear">
+                <div class="d-flex">
+                    <a href="#" data-back-button class="me-auto icon icon-m" title="icon"><i class="font-14 fa fa-arrow-left color-theme"></i></a>
+                    <a href="#" data-toggle-theme class="show-on-theme-light ms-auto icon icon-m" title="icon"><i class="font-12 fa fa-moon color-theme"></i></a>
+                    <a href="#" data-toggle-theme class="show-on-theme-dark ms-auto icon icon-m" title="icon"><i class="font-12 fa fa-lightbulb color-yellow-dark"></i></a>
+                </div>
+            </div>
+            <div class="card-center">
+                <div class="ps-5 pe-5">
+                    <h1 class="text-center font-800 font-20 mb-1 color-highlight">Sign Up</h1>
+                    <p class="text-center font-12">Create an Account. It's free!</p>
+
+                    <div class="input-style no-borders has-icon validate-field">
+                        <i class="fa fa-user"></i>
+                        <input type="name" class="form-control validate-name" id="form1a" placeholder="Name">
+                        <label for="form1a" class="color-blue-dark font-10 mt-1">Name</label>
+                        <i class="fa fa-times disabled invalid color-red-dark"></i>
+                        <i class="fa fa-check disabled valid color-green-dark"></i>
+                        <em>(required)</em>
+                    </div>
+                    <div class="input-style no-borders has-icon validate-field mt-2">
+                        <i class="fa fa-at"></i>
+                        <input type="email" class="form-control validate-name" id="form1aa" placeholder="Email">
+                        <label for="form1aa" class="color-blue-dark font-10 mt-1">Email</label>
+                        <i class="fa fa-times disabled invalid color-red-dark"></i>
+                        <i class="fa fa-check disabled valid color-green-dark"></i>
+                        <em>(required)</em>
+                    </div>
+                    <div class="input-style no-borders has-icon validate-field mt-2">
+                        <i class="fa fa-lock"></i>
+                        <input type="password" class="form-control validate-text" id="form3a" placeholder="Choose a Password">
+                        <label for="form3a" class="color-blue-dark font-10 mt-1">Choose a Password</label>
+                        <i class="fa fa-times disabled invalid color-red-dark"></i>
+                        <i class="fa fa-check disabled valid color-green-dark"></i>
+                        <em>(required)</em>
+                    </div>
+                    <div class="input-style no-borders has-icon validate-field mt-2">
+                        <i class="fa fa-lock"></i>
+                        <input type="password" class="form-control validate-text" id="form3a1" placeholder="Confirm your Password">
+                        <label for="form3a1" class="color-blue-dark font-10 mt-1">Confirm your Password</label>
+                        <i class="fa fa-times disabled invalid color-red-dark"></i>
+                        <i class="fa fa-check disabled valid color-green-dark"></i>
+                        <em>(required)</em>
+                    </div>
+
+                    <div class="text-center mb-5 mt-5">
+                        <a href="sign-in.html" class="font-12 color-white opacity-60">Already Registered? Sign in Here</a>
+                    </div>
+
+                    <a href="#" class="back-button btn btn-full btn-m shadow-large rounded-sm text-uppercase font-900 color-white" style="background-color:#222">Create Account</a>
+                </div>
+            </div>
         </div>
-     <div id="footer-bar" class="footer-bar-1">
-        <a href="index.html"><i class="fa-solid fa-house"></i><span class="font-14">Home</span></a>
-        <a href="water.html"><i class="fa-solid fa-water"></i><span class="font-14">Water</span></a>
-        <a href="power.html"><i class="fa-solid fa-plug"></i><span class="font-14">Power</span></a>
-        <a href="alerts.html" class="active-nav"><i class="fa-solid fa-bell"></i><span class="font-14">Alerts</span></a>
+
     </div>
-        
-    <div class="page-content header-clear-large">
-            <h1>Alerts</h1>
-        </div>
-    </div>
+    
+         
+
     <!-- End of Page Content--> 
     <!-- All Menus, Action Sheets, Modals, Notifications, Toasts, Snackbars get Placed outside the <div class="page-content"> -->
     <div id="menu-settings" class="menu menu-box-bottom menu-box-detached">
@@ -128,7 +173,7 @@
     <div id="menu-install-pwa-android" class="menu menu-box-bottom menu-box-detached rounded-l">
         <div class="boxed-text-l mt-4 pb-3">
             <img class="rounded-l mb-3" src="app/icons/icon-128x128.png" alt="img" width="90">
-            <h4 class="mt-3">Add Ryzosens on your Home Screen</h4>
+            <h4 class="mt-3">Ryzosens on your Home Screen</h4>
             <p>
                 Install Ryzosens on your home screen, and access it just like a regular app. It really is that simple!
             </p>
@@ -145,17 +190,16 @@
             <img class="rounded-l mb-3" src="app/icons/icon-128x128.png" alt="img" width="90">
             <h4 class="mt-3">Add Ryzosens on your Home Screen</h4>
             <p class="mb-0 pb-0">
-                Install Ryzosens, and access it like a regular app. Open your Safari menu and tap "Add to Home Screen".
+                Install Ryzo, and access it like a regular app. Open your Safari menu and tap "Add to Home Screen".
             </p>
             <div class="clearfix pt-3"></div>
             <a href="#" class="pwa-dismiss close-menu color-highlight text-uppercase font-700">Maybe later</a>
         </div>
     </div>
-    
 </div>
 
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
 <script type="text/javascript" src="js/graphProgress.js"></script>
-</body>
+</body> 
 </html>

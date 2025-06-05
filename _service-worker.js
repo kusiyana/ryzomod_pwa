@@ -13,6 +13,9 @@ var REQUIRED_FILES = [
 	'power.html',
 	'water.html',
 	'alerts.html',
+	'sign-in.html',
+	'sign-up.html',
+	'forgot-password.html',
 	// Styles
 	'styles/style.css',
 	'styles/bootstrap.css',
@@ -41,6 +44,11 @@ var REQUIRED_FILES = [
 	// Images
 	'images/empty.png',
 	'images/ryzosens/ryzosens-logo.png',
+	// Icons
+	'icons/favicon.ico',
+	'icons/icon-128x128.png',
+	'icons/icon-512x512.png',
+
 ];
 
 // Service Worker Diagnostic. Set true to get console logs.
