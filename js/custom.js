@@ -24,9 +24,32 @@ document.addEventListener('DOMContentLoaded', () => {
         var i, e, el; //https://www.w3schools.com/js/js_performance.asp
 
         //Attaching Menu Hider
+        // var menuHider = document.getElementsByClassName('menu-hider');
+        // if(!menuHider.length){var hider = document.createElement('div'); hider.setAttribute("class", "menu-hider");document.body.insertAdjacentElement('beforebegin', hider);}
+		// setTimeout(function() {if(hider.classList.contains('menu-active')){hider.classList.remove('menu-active');}}, 50);
+
+        // ENCOUNTERED AN ISSUE WITH MENU HIDER IN ABOVE CODE CAUSED BY SET TIME OUT BEING FIRED TOO EARLY
+        // THIS IS A FIX FOR THAT ISSUE IN THE CODE ABOVE SEE CODE BELOW
+        // This code checks if the menu-hider exists, if not it creates one, and then removes the menu-active class after a short delay.
+
+
         var menuHider = document.getElementsByClassName('menu-hider');
-        if(!menuHider.length){var hider = document.createElement('div'); hider.setAttribute("class", "menu-hider");document.body.insertAdjacentElement('beforebegin', hider);}
-		setTimeout(function() {if(hider.classList.contains('menu-active')){hider.classList.remove('menu-active');}}, 50);
+            var hider;
+
+            if (!menuHider.length) {
+                hider = document.createElement('div');
+                hider.setAttribute("class", "menu-hider");
+                document.body.insertAdjacentElement('beforebegin', hider);
+            } else {
+                hider = menuHider[0]; // fallback to existing element
+            }
+
+            setTimeout(function() {
+                if (hider && hider.classList.contains('menu-active')) {
+                    hider.classList.remove('menu-active');
+                }
+            }, 50);
+
 
         //Activating Menus
         document.querySelectorAll('.menu').forEach(el=>{el.style.display='block'})
