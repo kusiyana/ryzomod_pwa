@@ -1,10 +1,6 @@
 /* Generating Color Pack*/
 .color-highlight {
   color: #DA4453 !important;
-  /*
-  added chanhes
-  */
-  color: #F2A319 !important;
 }
 
 .bg-highlight {
@@ -26,18 +22,12 @@
 .footer-bar-4 strong,
 .splide__pagination__page.is-active {
   background-color: #DA4453 !important;
-  /*
-  added changes
-  */
-  background-color: #F2A319 !important;
 }
 
 .footer-bar-1 .active-nav i,
 .footer-bar-1 .active-nav span,
 .footer-bar-3 .active-nav i {
   color: #DA4453 !important;
-  /* added changes */
-  color: #F2A319 !important;
 }
 
 .form-floating-over > .form-control:focus ~ label {
@@ -54,10 +44,6 @@
 
 .color-highlight {
   color: #DA4453;
-  /*
-  added chanhes
-  */
-  color: #F2A319;
 }
 
 .bg-highlight {

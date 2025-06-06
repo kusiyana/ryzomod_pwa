@@ -264,8 +264,21 @@ label {
   align-items: center;
 }
 
-
-
+/*
+Added from bootstrap:
+.input-group-text {}
+*/
+.input-group-text {
+  background-color: transparent!important;
+}
+.input-group-text #status{
+  width: 40px;
+  height: 40px;
+  background-color: #222;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent !important;
+}
 
 /*Logos*/
 .header-logo {

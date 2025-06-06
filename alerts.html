@@ -33,10 +33,100 @@
         <a href="alerts.html" class="active-nav"><i class="fa-solid fa-bell"></i><span class="font-14">Alerts</span></a>
     </div>
         
-    <div class="page-content header-clear-large">
-            <h1>Alerts</h1>
+        <div class="page-content header-clear-large">
+            <div class="col-12">
+                <div class="row">
+                    <h1 class="text-center color-highlight font-20 font-800">Add Alert</h1>
+                </div>
+                <div class="row ms-2 me-2">
+                    <!-- Parameters hard wired data to be replaced by Hayden: poss Json file -->
+                    <div class="input-style has-borders no-icon mb-4">
+                    <label for="parameter" class="color-highlight">Select Parameter</label>
+                        <select id="parameter" title="parameter">
+                            <option value="default" disabled selected>Select Parameter</option>
+                            <option value="x1 parameter">x1 Parameter</option>
+                            <option value="x2 parameter">x2 Parameter</option>
+                            <option value="x3 parameter">x3 Parameter</option>
+                            <option value="x4 parameter">x4 Parameter</option>
+                            <option value="x5 parameter">x5 Parameter</option>
+                            <option value="x6 parameter">x6 Parameter</option>
+                            <option value="x7 parameter">x7 Parameter</option>
+                        </select>
+                            <span><i class="fa fa-chevron-down"></i></span>
+                                <i class="fa fa-check disabled valid color-green-dark"></i>
+                                <i class="fa fa-check disabled invalid color-red-dark"></i>
+                                <em></em>
+                    </div>
+                    <!-- Conditions hard wired data to be replaced by Hayden: poss Json file -->
+                    <div class="input-style has-borders no-icon mb-4">
+                    <label for="condition" class="color-highlight">Select Condition</label>
+                        <select id="condition" title="condition">
+                            <option value="default" disabled selected>Select Condition</option>
+                            <option value="x1 parameter">x1 Condition</option>
+                            <option value="x2 parameter">x2 Condition</option>
+                            <option value="x3 parameter">x3 Condition</option>
+                            <option value="x4 parameter">x4 Condition</option>
+                            <option value="x5 parameter">x5 Condition</option>
+                            <option value="x6 parameter">x6 Condition</option>
+                            <option value="x7 parameter">x7 Condition</option>
+                        </select>
+                            <span><i class="fa fa-chevron-down"></i></span>
+                                <i class="fa fa-check disabled valid color-green-dark"></i>
+                                <i class="fa fa-check disabled invalid color-red-dark"></i>
+                                <em></em>
+                    </div>
+                </div>
+                <!-- <div class="divider divider-margins mb-1 mt-1 opacity-50"></div> -->
+                <div class="row  ms-2 me-2">
+                    <div class="input-style has-borders no-icon mb-4">
+                        <label for="condition-value" class="color-highlight">Condition Value</label>
+                        <input type="text" id="condition-value" class="form-control" placeholder="Enter Condition Value" title="condition-value">
+                        <i class="fa fa-check disabled valid color-green-dark"></i>
+                        <i class="fa fa-check disabled invalid color-red-dark"></i>
+                        <em></em>
+                    </div>
+                    <div class="input-style has-borders no-icon mb-4">
+                        <label for="send-to-name" class="color-highlight">Send to Name</label>
+                        <input type="text" id="send-to-name" class="form-control" placeholder="Enter Name to Send Alert To" title="send-to-name">
+                        <i class="fa fa-check disabled valid color-green-dark"></i>
+                        <i class="fa fa-check disabled invalid color-red-dark"></i>
+                        <em></em>
+                    </div>
+                </div>
+                <div class="row ms-2 me-2">
+                    <div class="input-style has-borders no-icon mb-4">
+                        <label for="contact-number" class="color-highlight">Contact Number</label>
+                        <input type="tel" id="contact-number" class="form-control" placeholder="Send to contact" title="contact-number">
+                        <i class="fa fa-check disabled valid color-green-dark"></i>
+                        <i class="fa fa-check disabled invalid color-red-dark"></i>
+                    </div>
+                    <!-- <div class="input-style has-borders no-icon mb-4">
+                        <label for="status" class="color-highlight">Status</label>
+                        <input type="checkbox" id="status" class="form-control" title="status">
+                        <i class="fa fa-check disabled valid color-green-dark"></i>
+                        <i class="fa fa-check disabled invalid color-red-dark"></i>
+                        <em></em>
+                    </div> -->
+                    <div class="input-group mb-3">
+                        <div class="input-group-text">
+                            <input 
+                            class="form-control form-check-input mt-0" 
+                            type="checkbox" value="" 
+                            aria-label="Status Message"  
+                            id="status" 
+                            title="status"
+                            checked />
+                        </div>
+                        <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="Status Message" value="Active" readonly>
+                        <i class="fa fa-check disabled valid color-green-dark"></i>
+                        <i class="fa fa-check disabled invalid color-red-dark"></i>
+                        <em></em>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+  
     <!-- End of Page Content--> 
     <!-- All Menus, Action Sheets, Modals, Notifications, Toasts, Snackbars get Placed outside the <div class="page-content"> -->
     <div id="menu-settings" class="menu menu-box-bottom menu-box-detached">
