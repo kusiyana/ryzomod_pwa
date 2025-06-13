@@ -1,0 +1,559 @@
+<!-- Refactored Template for SPA-like PWA -->
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <meta name="mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+      <title>Ryzosens</title>
+      <link rel="stylesheet" href="styles/bootstrap.css">
+      <link rel="stylesheet" href="styles/style.css">
+      <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="fonts/css/fontawesome-all.min.css">
+      <link rel="manifest" href="_manifest.json" data-pwa-version="4.8.1">
+      <link rel="apple-touch-icon" sizes="180x180" href="theme/app/icons/icon-192x192.png">
+   </head>
+   <body class="theme-dark" data-highlight="highlight-yellow" data-background="dark">
+      <div id="preloader">
+         <div class="spinner-border color-highlight" role="status"></div>
+      </div>
+      <div id="page">
+         <div id="header" class="header header-fixed header-logo-left">
+            <a href="#" class="header-logo"></a>
+            <a href="#" data-menu="menu-logout" class="header-icon header-icon-1"><i class="fa-solid fa-ellipsis-vertical fa-2x"></i></a>
+         </div>
+         <div id="footer-bar" class="footer-bar-1" role="navigation" aria-label="Main navigation">
+            <a href="#index" class="nav-link active-nav" data-target="index" aria-current="page"><i class="fa-solid fa-house"></i><span class="font-14">Home</span></a>
+            <a href="#water" class="nav-link" data-target="water"><i class="fa-solid fa-water"></i><span class="font-14">Water</span></a>
+            <a href="#power" class="nav-link" data-target="power"><i class="fa-solid fa-plug"></i><span class="font-14">Power</span></a>
+            <a href="#alerts" class="nav-link" data-target="alerts"><i class="fa-solid fa-bell"></i><span class="font-14">Alerts</span></a>
+         </div>
+         <div class="page-content header-clear-large fade-in" id="index">
+            <div class="card">
+               <div class="row">
+                  <div class="col-12 text-center">
+                     <div class="content">
+                        <div class="content-data">
+                           <i class="fa-solid fa-water color-aqua-dark fa-2x opacity-60"></i>
+                           <h2 class="color-highlight font-20 font-700">Water</h2>
+                           <p class="mt-n1 color-white font-700">consumption</p>
+                        </div>
+                        <div class="content-data">
+                           <div class="infographic">
+                              <div class="progress-container">
+                                 <svg width="80" height="80">
+                                    <circle cx="40" cy="40" r="30" stroke="#333" stroke-width="10" fill="none" />
+                                    <circle class="progress-bar" cx="40" cy="40" r="30" stroke="#007c98" stroke-width="10" fill="none" stroke-linecap="round" />
+                                 </svg>
+                                 <span class="progress-text">25%</span>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="divider divider-margins mb-4 mt-4"></div>
+                        <div class="content-data">
+                           <i class="fa-solid fa-plug color-blue-dark fa-2x opacity-60"></i>
+                           <h2 class="color-highlight font-20 font-700">Power</h2>
+                           <p class="mt-n1 color-white font-700">usage</p>
+                        </div>
+                        <div class="content-data">
+                           <div class="infographic">
+                              <div class="progress-container">
+                                 <svg width="80" height="80">
+                                    <circle cx="40" cy="40" r="30" stroke="#333" stroke-width="10" fill="none" />
+                                    <circle class="progress-bar" cx="40" cy="40" r="30" stroke="#FE5F55" stroke-width="10" fill="none" stroke-linecap="round" />
+                                 </svg>
+                                 <span class="progress-text">60%</span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- All Menus, Action Sheets, Modals, Notifications, Toasts, Snackbars get Placed outside the <div class="page-content"> -->
+         <!-- Dynamic Page Sections -->
+         <div id="water" class="page-section fade-in">
+            <div class="content text-center mt-3">
+               <!-- Start water page content -->
+               <div class="card card-top card-pattern">
+                  <div class="col-12">
+                     <div class="content text-center">
+                        <h2 class="color-highlight text-capitalize font-20 font-700">water</h2>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="content">
+                           <ul class="content-data">
+                              <li>
+                                 <div class="status-row">
+                                    <div class="energy-icon"><i class="fa-solid fa-bore-hole fa-2x"></i></div>
+                                    <label class="font-14">Barhole pressure</label>
+                                    <div class="progress-bar-content">
+                                       <input type="hidden" value="56" class="progress-value" />
+                                       <div class="progress-bar">
+                                          <div class="progress-fill"></div>
+                                          <span class="progress-label">56.0%</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="status-row">
+                                    <div class="energy-icon"><i class="fa-solid fa-cubes-stacked fa-2x"></i></div>
+                                    <label class="font-14">Water tank</label>
+                                    <div class="progress-bar-content">
+                                       <input type="hidden" value="53.9 0w" class="progress-value" />
+                                       <div class="progress-bar">
+                                          <div class="progress-fill"></div>
+                                          <span class="progress-label">53.8 0w%</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="status-row">
+                                    <div class="energy-icon"><i class="fa-solid fa-chart-column fa-2x"></i></div>
+                                    <label class="font-14">Consumed</label>
+                                    <div class="progress-bar-content">
+                                       <input type="hidden" value="14.040 0w" class="progress-value" />
+                                       <div class="progress-bar">
+                                          <div class="progress-fill"></div>
+                                          <span class="progress-label">14.040 0w</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="status-row">
+                                    <div class="energy-icon"><i class="fa-solid fa-chart-column fa-2x"></i></i></div>
+                                    <label class="font-14">Remaining</label>
+                                    <div class="progress-bar-content">
+                                       <input type="hidden" value="91.9945.122000" class="progress-value" />
+                                       <div class="progress-bar">
+                                          <div class="progress-fill"></div>
+                                          <span class="progress-label">91.9945.122000</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="text-center">
+                           <h4 class="color-highlight text-capitalize font-14"><span style="border-bottom: 2px solid #F2A319 !important;">inverter state</span></h4>
+                        </div>
+                        <div class="content">
+                           <div class="content-energy">
+                              <div>
+                                 <div class="input-style has-borders no-icon mb-4">
+                                    <label for="time-scale" class="color-highlight">Choose a time scale</label>
+                                    <select id="time-scale">
+                                       <option value="default" disabled selected>Choose a time scale</option>
+                                       <option value="0 hours">0 hours</option>
+                                       <option value="6 hours">6 hours</option>
+                                       <option value="12 hours">12 hours</option>
+                                       <option value="24 hours">24 hours</option>
+                                       <option value="2 days">2 days</option>
+                                       <option value="3 days">3 days</option>
+                                       <option value="4 days">4 days</option>
+                                       <option value="5 days">5 days</option>
+                                       <option value="6 days">6 days</option>
+                                       <option value="7 days">7 days</option>
+                                       <option value="2 weeks">2 weeks</option>
+                                       <option value="3 weeks">3 weeks</option>
+                                       <option value="4 weeks">4 weeks</option>
+                                       <option value="2 months">2 months</option>
+                                    </select>
+                                    <span><i class="fa fa-chevron-down"></i></span>
+                                    <i class="fa fa-check disabled valid color-green-dark"></i>
+                                    <i class="fa fa-check disabled invalid color-red-dark"></i>
+                                    <em></em>
+                                 </div>
+                              </div>
+                              <div>
+                                 <button class="btn btn-full btn-m rounded-sm shadow-xl text-uppercase font-900 color-white ms-2 mt-n2" style="background-color:#222" type="submit">submit</button> 
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="card card-style">
+                        <div class="content mb-0">
+                           <h2 class="text-center bottom-0 font-20 font-700">Mobile Devices</h2>
+                           <p class="text-center mt-n2 font-11 color-highlight">Mobile Devices by Use in 2017</p>
+                           <div class="chart-container mb-2" style="width:100%; height:350px;">
+                              <canvas class="graph" id="doughnut-chart"/>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- End of water page content -->
+            </div>
+         </div>
+         <div id="power" class="page-section fade-in">
+            <div class="content text-center mt-3">
+               <!-- Start Power page content -->
+               <div class="card card-top card-pattern">
+                  <div class="col-12">
+                     <div class="content text-center">
+                        <h2 class="color-highlight text-capitalize font-20 font-700">power</h2>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="content">
+                           <ul class="content-data">
+                              <li>
+                                 <div class="status-row">
+                                    <div class="energy-icon"><i class="fa-solid fa-battery-full fa-2x"></i></div>
+                                    <label class="font-14">Battery level</label>
+                                    <div class="progress-bar-content">
+                                       <input type="hidden" value="56" class="progress-value" />
+                                       <div class="progress-bar">
+                                          <div class="progress-fill"></div>
+                                          <span class="progress-label">56.0%</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="status-row">
+                                    <div class="energy-icon"><i class="fa-solid fa-battery-quarter fa-2x"></i></div>
+                                    <label class="font-14">Battery load</label>
+                                    <div class="progress-bar-content">
+                                       <input type="hidden" value="53.9 0w" class="progress-value" />
+                                       <div class="progress-bar">
+                                          <div class="progress-fill"></div>
+                                          <span class="progress-label">53.8 0w%</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="status-row">
+                                    <div class="energy-icon"><i class="fa-solid fa-plug fa-2x"></i></div>
+                                    <label class="font-14">Battery charging</label>
+                                    <div class="progress-bar-content">
+                                       <input type="hidden" value="14.040 0w" class="progress-value" />
+                                       <div class="progress-bar">
+                                          <div class="progress-fill"></div>
+                                          <span class="progress-label">14.040 0w</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="status-row">
+                                    <div class="energy-icon"><i class="fa-solid fa-solar-panel fa-2x"></i></div>
+                                    <label class="font-14">Grid voltage</label>
+                                    <div class="progress-bar-content">
+                                       <input type="hidden" value="91.9945.122000" class="progress-value" />
+                                       <div class="progress-bar">
+                                          <div class="progress-fill"></div>
+                                          <span class="progress-label">91.9945.122000</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Add charts .js-->
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="text-center">
+                           <h4 class="color-highlight text-capitalize font-14"><span style="border-bottom: 2px solid #F2A319 !important;">inverter state</span></h4>
+                        </div>
+                        <div class="content">
+                           <div class="content-energy">
+                              <div>
+                                 <div class="input-style has-borders no-icon mb-4">
+                                    <label for="time-scale" class="color-highlight">Choose a time scale</label>
+                                    <select id="time-scale">
+                                       <option value="default" disabled selected>Choose a time scale</option>
+                                       <option value="0 hours">0 hours</option>
+                                       <option value="6 hours">6 hours</option>
+                                       <option value="12 hours">12 hours</option>
+                                       <option value="24 hours">24 hours</option>
+                                       <option value="2 days">2 days</option>
+                                       <option value="3 days">3 days</option>
+                                       <option value="4 days">4 days</option>
+                                       <option value="5 days">5 days</option>
+                                       <option value="6 days">6 days</option>
+                                       <option value="7 days">7 days</option>
+                                       <option value="2 weeks">2 weeks</option>
+                                       <option value="3 weeks">3 weeks</option>
+                                       <option value="4 weeks">4 weeks</option>
+                                       <option value="2 months">2 months</option>
+                                    </select>
+                                    <span><i class="fa fa-chevron-down"></i></span>
+                                    <i class="fa fa-check disabled valid color-green-dark"></i>
+                                    <i class="fa fa-check disabled invalid color-red-dark"></i>
+                                    <em></em>
+                                 </div>
+                              </div>
+                              <div>
+                                 <button class="btn btn-full btn-m rounded-sm shadow-xl text-uppercase font-900 color-white ms-2 mt-n2" style="background-color:#222" type="submit">submit</button> 
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="card card-style">
+                           <div class="content mb-0">
+                              <h2 class="text-center bottom-0 font-20 font-700">Mobile Devices</h2>
+                              <p class="text-center mt-n2 font-11 color-highlight">Mobile Devices by Use in 2017</p>
+                              <div class="chart-container mb-2" style="width:100%; height:350px;">
+                                 <canvas class="graph" id="doughnut-chart" />
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- End Power page content -->
+            </div>
+         </div>
+         <div id="alerts" class="page-section fade-in">
+            <div class="content text-center mt-3">
+               <!-- Start Alert page content -->
+               <div class="col-12">
+                  <div class="row">
+                     <h1 class="text-center color-highlight font-20 font-800">Add Alert</h1>
+                  </div>
+                  <div class="row ms-2 me-2">
+                     <!-- Parameters hard wired data to be replaced by Hayden: poss Json file -->
+                     <div class="input-style has-borders no-icon mb-4">
+                        <label for="parameter" class="color-highlight">Select Parameter</label>
+                        <select id="parameter" title="parameter">
+                           <option value="default" disabled selected>Select Parameter</option>
+                           <option value="x1 parameter">x1 Parameter</option>
+                           <option value="x2 parameter">x2 Parameter</option>
+                           <option value="x3 parameter">x3 Parameter</option>
+                           <option value="x4 parameter">x4 Parameter</option>
+                           <option value="x5 parameter">x5 Parameter</option>
+                           <option value="x6 parameter">x6 Parameter</option>
+                           <option value="x7 parameter">x7 Parameter</option>
+                        </select>
+                        <span><i class="fa fa-chevron-down"></i></span>
+                        <i class="fa fa-check disabled valid color-green-dark"></i>
+                        <i class="fa fa-check disabled invalid color-red-dark"></i>
+                        <em></em>
+                     </div>
+                     <!-- Conditions hard wired data to be replaced by Hayden: poss Json file -->
+                     <div class="input-style has-borders no-icon mb-4">
+                        <label for="condition" class="color-highlight">Select Condition</label>
+                        <select id="condition" title="condition">
+                           <option value="default" disabled selected>Select Condition</option>
+                           <option value="x1 parameter">x1 Condition</option>
+                           <option value="x2 parameter">x2 Condition</option>
+                           <option value="x3 parameter">x3 Condition</option>
+                           <option value="x4 parameter">x4 Condition</option>
+                           <option value="x5 parameter">x5 Condition</option>
+                           <option value="x6 parameter">x6 Condition</option>
+                           <option value="x7 parameter">x7 Condition</option>
+                        </select>
+                        <span><i class="fa fa-chevron-down"></i></span>
+                        <i class="fa fa-check disabled valid color-green-dark"></i>
+                        <i class="fa fa-check disabled invalid color-red-dark"></i>
+                        <em></em>
+                     </div>
+                  </div>
+                  <div class="row  ms-2 me-2">
+                     <div class="input-style has-borders no-icon mb-4">
+                        <label for="condition-value" class="color-highlight">Condition Value</label>
+                        <input type="text" id="condition-value" class="form-control" placeholder="Enter Condition Value" title="condition-value">
+                        <i class="fa fa-check disabled valid color-green-dark"></i>
+                        <i class="fa fa-check disabled invalid color-red-dark"></i>
+                        <em></em>
+                     </div>
+                     <div class="input-style has-borders no-icon mb-4">
+                        <label for="send-to-name" class="color-highlight">Send to Name</label>
+                        <input type="text" id="send-to-name" class="form-control" placeholder="Enter Name to Send Alert To" title="send-to-name">
+                        <i class="fa fa-check disabled valid color-green-dark"></i>
+                        <i class="fa fa-check disabled invalid color-red-dark"></i>
+                        <em></em>
+                     </div>
+                  </div>
+                  <div class="row ms-2 me-2">
+                     <div class="input-style has-borders no-icon mb-4">
+                        <label for="contact-number" class="color-highlight">Contact Number</label>
+                        <input type="tel" id="contact-number" class="form-control" placeholder="Send to contact" title="contact-number">
+                        <i class="fa fa-check disabled valid color-green-dark"></i>
+                        <i class="fa fa-check disabled invalid color-red-dark"></i>
+                     </div>
+                     <div class="input-group mb-3">
+                        <div class="input-group-text">
+                           <input 
+                              class="form-control form-check-input mt-0" 
+                              type="checkbox" value="" 
+                              aria-label="Status Message"  
+                              id="status" 
+                              title="status"
+                              checked />
+                        </div>
+                        <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="Status Message" value="Active" readonly>
+                        <i class="fa fa-check disabled valid color-green-dark"></i>
+                        <i class="fa fa-check disabled invalid color-red-dark"></i>
+                        <em></em>
+                     </div>
+                  </div>
+                  <div class="row ms-2 me-2">
+                     <div>
+                        <button class="btn btn-full btn-m rounded-sm shadow-xl text-uppercase font-900 color-white ms-2 mt-n2" style="background-color:#222" type="submit">Submit
+                        </button>
+                     </div>
+                  </div>
+               </div>
+               <!-- End of Alert page content -->
+            </div>
+         </div>
+         <!-- Menus -->
+         <div id="menu-logout" class="menu menu-box-top menu-box-detached rounded-m" data-menu-height="420" data-menu-effect="menu-parallax">
+            <div class="menu-title mt-0 pt-0">
+               <h1 class="text-center">Logout Ryzosens</h1>
+               <a href="#" class="close-menu"><i class="fa fa-times"></i></a>
+            </div>
+            <div class="content">
+               <p class="text-center">Click the link below to logout</p>
+            
+               <a href="sign-in.html" onclick="localStorage.setItem('logoutSuccess', 'true');" class="btn btn-full btn-m rounded-sm bg-highlight shadow-xl text-uppercase font-900 mt-4 text-center color-green-dark">Logout</a>
+
+            </div>
+         </div>
+         <div id="menu-settings" class="menu menu-box-bottom menu-box-detached">
+            <div class="menu-title mt-0 pt-0">
+               <h1>Settings</h1>
+               <p class="color-highlight">Flexible and Easy to Use</p>
+               <a href="#" class="close-menu" title="icon"><i class="fa fa-times"></i></a>
+            </div>
+            <div class="divider divider-margins mb-n2"></div>
+            <div class="content">
+               <div class="list-group list-custom-small">
+                  <a href="#" data-toggle-theme data-trigger-switch="switch-dark-mode" class="pb-2 ms-n1">
+                     <i class="fa font-12 fa-moon rounded-s bg-highlight color-white me-3"></i>
+                     <span>Dark Mode</span>
+                     <div class="custom-control scale-switch ios-switch">
+                        <input data-toggle-theme type="checkbox" class="ios-input" id="switch-dark-mode" title="textbox">
+                        <label class="custom-control-label" for="switch-dark-mode"></label>
+                     </div>
+                     <i class="fa fa-angle-right"></i>
+                  </a>
+               </div>
+               <div class="list-group list-custom-large">
+                  <a data-menu="menu-highlights" href="#">
+                  <i class="fa font-14 fa-tint bg-green-dark rounded-s"></i>
+                  <span>Page Highlight</span>
+                  <strong>16 Colors Highlights Included</strong>
+                  <span class="badge bg-highlight color-white">HOT</span>
+                  <i class="fa fa-angle-right"></i>
+                  </a>        
+                  <a data-menu="menu-backgrounds" href="#" class="border-0">
+                  <i class="fa font-14 fa-cog bg-blue-dark rounded-s"></i>
+                  <span>Background Color</span>
+                  <strong>10 Page Gradients Included</strong>
+                  <span class="badge bg-highlight color-white">NEW</span>
+                  <i class="fa fa-angle-right"></i>
+                  </a>        
+               </div>
+            </div>
+         </div>
+         <!-- Menu Settings Highlights-->
+         <div id="menu-highlights" class="menu menu-box-bottom menu-box-detached">
+            <div class="menu-title">
+               <h1>Highlights</h1>
+               <p class="color-highlight">Any Element can have a Highlight Color</p>
+               <a href="#" class="close-menu" title="icon"><i class="fa fa-times"></i></a>
+            </div>
+            <div class="divider divider-margins mb-n2"></div>
+            <div class="content">
+               <div class="highlight-changer">
+                  <a href="#" data-change-highlight="blue"><i class="fa fa-circle color-blue-dark"></i><span class="color-blue-light">Default</span></a>
+                  <a href="#" data-change-highlight="red"><i class="fa fa-circle color-red-dark"></i><span class="color-red-light">Red</span></a>    
+                  <a href="#" data-change-highlight="orange"><i class="fa fa-circle color-orange-dark"></i><span class="color-orange-light">Orange</span></a>    
+                  <a href="#" data-change-highlight="pink2"><i class="fa fa-circle color-pink2-dark"></i><span class="color-pink-dark">Pink</span></a>    
+                  <a href="#" data-change-highlight="magenta"><i class="fa fa-circle color-magenta-dark"></i><span class="color-magenta-light">Purple</span></a>    
+                  <a href="#" data-change-highlight="aqua"><i class="fa fa-circle color-aqua-dark"></i><span class="color-aqua-light">Aqua</span></a>      
+                  <a href="#" data-change-highlight="teal"><i class="fa fa-circle color-teal-dark"></i><span class="color-teal-light">Teal</span></a>      
+                  <a href="#" data-change-highlight="mint"><i class="fa fa-circle color-mint-dark"></i><span class="color-mint-light">Mint</span></a>      
+                  <a href="#" data-change-highlight="green"><i class="fa fa-circle color-green-light"></i><span class="color-green-light">Green</span></a>    
+                  <a href="#" data-change-highlight="grass"><i class="fa fa-circle color-green-dark"></i><span class="color-green-dark">Grass</span></a>       
+                  <a href="#" data-change-highlight="sunny"><i class="fa fa-circle color-yellow-light"></i><span class="color-yellow-light">Sunny</span></a>    
+                  <a href="#" data-change-highlight="yellow"><i class="fa fa-circle color-yellow-dark"></i><span class="color-yellow-light">Goldish</span></a>
+                  <a href="#" data-change-highlight="brown"><i class="fa fa-circle color-brown-dark"></i><span class="color-brown-light">Wood</span></a>    
+                  <a href="#" data-change-highlight="night"><i class="fa fa-circle color-dark-dark"></i><span class="color-dark-light">Night</span></a>
+                  <a href="#" data-change-highlight="dark"><i class="fa fa-circle color-dark-light"></i><span class="color-dark-light">Dark</span></a>
+                  <div class="clearfix"></div>
+               </div>
+               <a href="#" data-menu="menu-settings" class="mb-3 btn btn-full btn-m rounded-sm bg-highlight shadow-xl text-uppercase font-900 mt-4">Back to Settings</a>
+            </div>
+         </div>
+         <!-- Menu Settings Backgrounds-->
+         <div id="menu-backgrounds" class="menu menu-box-bottom menu-box-detached">
+            <div class="menu-title">
+               <h1>Backgrounds</h1>
+               <p class="color-highlight">Change Page Color Behind Content Boxes</p>
+               <a href="#" class="close-menu" title="icon"><i class="fa fa-times"></i></a>
+            </div>
+            <div class="divider divider-margins mb-n2"></div>
+            <div class="content">
+               <div class="background-changer">
+                  <a href="#" data-change-background="default"><i class="bg-theme"></i><span class="color-dark-dark">Default</span></a>
+                  <a href="#" data-change-background="plum"><i class="body-plum"></i><span class="color-plum-dark">Plum</span></a>
+                  <a href="#" data-change-background="magenta"><i class="body-magenta"></i><span class="color-dark-dark">Magenta</span></a>
+                  <a href="#" data-change-background="dark"><i class="body-dark"></i><span class="color-dark-dark">Dark</span></a>
+                  <a href="#" data-change-background="violet"><i class="body-violet"></i><span class="color-violet-dark">Violet</span></a>
+                  <a href="#" data-change-background="red"><i class="body-red"></i><span class="color-red-dark">Red</span></a>
+                  <a href="#" data-change-background="green"><i class="body-green"></i><span class="color-green-dark">Green</span></a>
+                  <a href="#" data-change-background="sky"><i class="body-sky"></i><span class="color-sky-dark">Sky</span></a>
+                  <a href="#" data-change-background="orange"><i class="body-orange"></i><span class="color-orange-dark">Orange</span></a>
+                  <a href="#" data-change-background="yellow"><i class="body-yellow"></i><span class="color-yellow-dark">Yellow</span></a>
+                  <div class="clearfix"></div>
+               </div>
+               <a href="#" data-menu="menu-settings" class="mb-3 btn btn-full btn-m rounded-sm bg-highlight shadow-xl text-uppercase font-900 mt-4">Back to Settings</a>
+            </div>
+         </div>
+         <!-- Menu Share -->
+         <!-- Be sure this is on your main visiting page, for example, the index.html page-->
+         <!-- Install Prompt for Android -->
+         <div id="menu-install-pwa-android" class="menu menu-box-bottom menu-box-detached rounded-l">
+            <div class="boxed-text-l mt-4 pb-3">
+               <img class="rounded-l mb-3" src="app/icons/icon-128x128.png" alt="img" width="90">
+               <h4 class="mt-3">Add Ryzosens on your Home Screen</h4>
+               <p>
+                  Install Ryzosens on your home screen, and access it just like a regular app. It really is that simple!
+               </p>
+               <a href="#" class="pwa-install btn btn-s rounded-s shadow-l text-uppercase font-900 bg-highlight mb-2">Add to Home Screen</a><br>
+               <a href="#" class="pwa-dismiss close-menu color-gray-dark text-uppercase font-900 opacity-60 font-10 pt-2">Maybe later</a>
+               <div class="clear"></div>
+            </div>
+         </div>
+         <!-- Install instructions for iOS -->
+         <div id="menu-install-pwa-ios" 
+            class="menu menu-box-bottom menu-box-detached rounded-l">
+            <div class="boxed-text-xl mt-4 pb-3">
+               <img class="rounded-l mb-3" src="app/icons/icon-128x128.png" alt="img" width="90">
+               <h4 class="mt-3">Add Ryzosens on your Home Screen</h4>
+               <p class="mb-0 pb-0">
+                  Install Ryzosens, and access it like a regular app. Open your Safari menu and tap "Add to Home Screen".
+               </p>
+               <div class="clearfix pt-3"></div>
+               <a href="#" class="pwa-dismiss close-menu color-highlight text-uppercase font-700">Maybe later</a>
+            </div>
+         </div>
+      </div>
+      <!-- Scripts -->
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script src="js/graphProgress.js"></script>
+   </body>
+</html>

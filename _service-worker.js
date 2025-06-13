@@ -9,10 +9,11 @@ var CACHE_NAME = APP_NAME + '-' + APP_VER;
 // Leave REQUIRED_FILES = [] to disable offline.
 var REQUIRED_FILES = [
 	// HTML Files
-	'index.html',
-	'power.html',
-	'water.html',
-	'alerts.html',
+	// 'index.html',
+	// 'power.html',
+	// 'water.html',
+	// 'alerts.html',
+	'template.html',
 	'sign-in.html',
 	'sign-up.html',
 	'forgot-password.html',

@@ -23,7 +23,7 @@
 <div id="page">
     <div id="header" class="header header-fixed header-logo-left">
         <a href="#" class="header-logo" title="logo"></a>
-        <a href="#" class="header-icon header-icon-1" title="icon"><i class="fa-solid fa-ellipsis-vertical fa-2x"></i></a>
+        <a href="#" data-menu="menu-logout" class="header-icon header-icon-1" title="icon"><i class="fa-solid fa-ellipsis-vertical fa-2x"></i></a>
         </div>
     <div id="footer-bar" class="footer-bar-1">
         <a href="index.html" class="active-nav"><i class="fa-solid fa-house"></i><span class="font-14">Home</span></a>
@@ -33,6 +33,7 @@
     </div>
         
     <div class="page-content header-clear-large">
+        <!-- Start Index page content -->
         <div class="card">
 
             <div class="row">
@@ -105,11 +106,28 @@
                     </div>
                 </div>
             </div>
-
         </div>
+        <!-- End Index page content -->
     </div>
     <!-- End of Page Content--> 
     <!-- All Menus, Action Sheets, Modals, Notifications, Toasts, Snackbars get Placed outside the <div class="page-content"> -->
+        <div id="menu-logout"
+            class="menu menu-box-top menu-box-detached rounded-m"
+            data-menu-height="420"
+            data-menu-effect="menu-parallax">
+        <!-- your menu stuff here-->
+                 <div class="menu-title mt-0 pt-0"><h1 class="text-center">Logout Ryzosens</h1>
+                    <a href="#" class="close-menu" title="icon"><i class="fa fa-times"></i></a>
+                </div>
+                <div class="content">
+                    <p class="text-center">Click the link below to logout </p>
+                    <!-- Point link to sign in page -->
+                    <a href="#" class="btn btn-full btn-m rounded-sm bg-highlight shadow-xl text-uppercase font-900 mt-4">Logout</a>
+                
+                    <p class="text-center">Or click the button below to cancel</p>
+                    <a href="#" class="btn btn-full btn-m rounded-sm bg-theme shadow-xl text-uppercase font-900 mt-4 close-menu">Cancel</a>
+                </div>
+        </div>
     <div id="menu-settings" class="menu menu-box-bottom menu-box-detached">
         <div class="menu-title mt-0 pt-0"><h1>Settings</h1><p class="color-highlight">Flexible and Easy to Use</p><a href="#" class="close-menu" title="icon"><i class="fa fa-times"></i></a></div>
         <div class="divider divider-margins mb-n2"></div>

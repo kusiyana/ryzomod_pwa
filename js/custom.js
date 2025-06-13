@@ -32,6 +32,49 @@ document.addEventListener('DOMContentLoaded', () => {
         // THIS IS A FIX FOR THAT ISSUE IN THE CODE ABOVE SEE CODE BELOW
         // This code checks if the menu-hider exists, if not it creates one, and then removes the menu-active class after a short delay.
 
+        // Added: this code shows and hides the app sections from user events in the footer bar
+        
+  const sections = ["index", "water", "power", "alerts"];
+                    function activatePage(pageId) {
+                        sections.forEach(id => {
+                        const el = document.getElementById(id);
+                        const navLink = document.querySelector(`#footer-bar a[data-target="${id}"]`);
+                        if (el) el.classList.remove("active");
+                        if (navLink) navLink.setAttribute("aria-current", "false");
+                        if (navLink) navLink.classList.remove("active-nav");
+                        });
+                        const target = document.getElementById(pageId);
+                        const activeLink = document.querySelector(`#footer-bar a[data-target="${pageId}"]`);
+                        if (target) target.classList.add("active");
+                        if (activeLink) activeLink.setAttribute("aria-current", "page");
+                        if (activeLink) activeLink.classList.add("active-nav");
+                    }
+                    document.querySelectorAll("#footer-bar a").forEach(link => {
+                        link.addEventListener("click", function (e) {
+                        e.preventDefault();
+                        const targetId = this.dataset.target;
+                        history.pushState(null, "", `#${targetId}`);
+                        activatePage(targetId);
+                        });
+                    });
+                    window.addEventListener("popstate", () => {
+                        const page = location.hash.replace("#", "") || "index";
+                        activatePage(page);
+                    });
+                    window.addEventListener("DOMContentLoaded", () => {
+                        const page = location.hash.replace("#", "") || "index";
+                        activatePage(page);
+                    });
+
+                    // Added: code to show message when user logs out
+
+                document.addEventListener("DOMContentLoaded", function () {
+                    const msg = document.getElementById("logout-message");
+                    if (localStorage.getItem("logoutSuccess") === "true") {
+                    msg.classList.add("show");
+                    localStorage.removeItem("logoutSuccess");
+                    }
+                });
 
         var menuHider = document.getElementsByClassName('menu-hider');
             var hider;
@@ -49,6 +92,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     hider.classList.remove('menu-active');
                 }
             }, 50);
+
+            // Adding menu-logout 
+            //show menu
+            menu('menu-logout', 'show', 250);
+            //hide menu
+            menu('menu-logout', 'hide', 250);
 
 
         //Activating Menus

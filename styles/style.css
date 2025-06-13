@@ -109,6 +109,72 @@ body {
   padding-bottom: calc(80px + env(safe-area-inset-bottom) * 1.1);
 }
 
+/*
+Log out message animation
+*/
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+#logout-message {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(10px);
+  transition: all 0.5s ease-in-out;
+  text-align: center;
+}
+
+#logout-message.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+
+/*
+added page sections for SPA 
+ template.html
+all sections loaded off the page
+*/
+
+  .page-section {
+    position: absolute;
+    top: 0;
+    left: 100vw;
+    width: 100vw;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #111;
+    transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+  }
+  .page-section.active {
+    left: 0;
+    opacity: 1;
+    z-index: 10;
+  }
+  #index {
+    position: relative;
+    left: 0;
+    z-index: 1;
+    opacity: 1;
+  }
+  .fade-in {
+    animation: fadeInUp 0.5s ease-in-out both;
+  }
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+/*Content Boxes*/
 .content-box {
   background-color: #FFFFFF;
   /*
@@ -278,6 +344,14 @@ Added from bootstrap:
   border-width: 1px;
   border-style: solid;
   border-color: transparent !important;
+}
+
+/*
+Menu Logout
+*/
+
+#menu-logout {
+  overflow: hidden;
 }
 
 /*Logos*/
